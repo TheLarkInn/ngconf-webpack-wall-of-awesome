@@ -17,8 +17,7 @@ module.exports = {
   },
   output: {
   	path: './dist',
-    publicPath: '/ngconf-webpack-wall-of-awesome/',
-  	filename: './[name].bundle.js',
+  	filename: '/ngconf-webpack-wall-of-awesome/[name].bundle.js',
   	sourceMapFilename: '[name].map',
   	chunkFilename: '[id].chunk.js'
   },
