@@ -1,22 +1,34 @@
-import {Component} from 'angular2/core';
-
+import {Component, ViewEncapsulation} from 'angular2/core'
 import {AppState} from './app_state.service.ts';
+import {TaskModel} from './task.model.ts';
+import {TaskBox} from './taskbox.component.ts';
+import {sortedByVotes} from './utils.ts';
 
 @Component({
 	selector: 'app',
 	pipes: [],
-	providers: [],
-	directives: [],
-	styles: [],
-	template: `<div>Hello World</div>`
+	providers: [TaskModel],
+	directives: [TaskBox],
+	styles: [require('./styles.css')],
+	encapsulation: ViewEncapsulation.None,
+	template: `
+		<div class="toptask-container">
+			<task-box [task]="task" (vote)="voteForTask(task, $event)" *ngFor="#task of tasks">
+			</task-box>
+		</div>
+	`
 })
 export class App {
-	onLoadWelcomeMessage: string = `Hello ngConf! I'm logging on ngOnInit()`;
-	name: string = 'Angular2 Webpack Lite';
+	tasks:Task[];
 
-	constructor(public appState: AppState) {}
+	constructor(private model:TaskModel, public appState:AppState) {
+		model.tasksUpdated.subscribe((tasks:Task[]) => {
+			this.tasks = sortedByVotes(tasks);
+		});
+	}
 
-	ngOnInit() {
-		console.log(this.onLoadWelcomeMessage, `App state is ${this.appState.state}`);
+	voteForTask(task, vote) {
+		task.votes += vote;
+		this.model.updateTask(task);
 	}
 }

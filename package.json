@@ -4,10 +4,10 @@
   "description": "Angular2 Webpack Lite Boilerplate",
   "main": "index.ts",
   "scripts": {
-    "typings":"typings",
-    "postinstall":"npm run typings -- install",
+    "typings": "typings",
+    "postinstall": "npm run typings -- install",
     "build": "webpack --progress --profile --colors --display-error-details --display-cached",
-    "server:dev":"webpack-dev-server --inline --progress --profile --colors --watch --display-error-details --display-cached --content-base src/"
+    "server:dev": "webpack-dev-server --inline --progress --profile --colors --watch --display-error-details --display-cached --content-base src/"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,8 @@
   "dependencies": {
     "angular2": "2.0.0-beta.16",
     "core-js": "^2.2.2",
+    "firebase": "^2.4.2",
+    "lodash": "^4.11.1",
     "normalize.css": "^4.1.1",
     "rxjs": "5.0.0-beta.6",
     "zone.js": "~0.6.11"
