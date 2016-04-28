@@ -16207,7 +16207,7 @@ webpackJsonp([1],{
 	    TaskBox = __decorate([
 	        core_1.Component({
 	            selector: 'task-box',
-	            template: "\n\t\t<div class=\"topcat-box\" title=\"{{task.description}}\">\n\n\t\t\t<div class=\"topcat-rating-controls\">\n\t\t\t\t<a (click)=\"upvote()\">\n\t\t\t\t\t<i class=\"fa fa-thumbs-up\"></i>\n\t\t\t\t</a>\n\n\t\t\t\t<a (click)=\"downvote()\">\n\t\t\t\t\t<i class=\"fa fa-thumbs-down\"></i>\n\t\t\t\t</a>\n\n\t\t\t\t<span class=\"topcat-votes\">\n\t\t\t\t\t<i class=\"fa fa-heart\"></i>{{task.votes}}\n\t\t\t\t</span>\n\t\t\t</div>\n\t\t</div>\n\t"
+	            template: "\n\t\t<div class=\"topcat-box\" title=\"{{task.description}}\">\n\t\t\t<div>\n\t\t\t\t{{task.description}}\n\t\t\t</div>\n\t\t\t<div class=\"topcat-rating-controls\">\n\t\t\t\t<a (click)=\"upvote()\">\n\t\t\t\t\t<i class=\"fa fa-thumbs-up\"></i>\n\t\t\t\t</a>\n\n\t\t\t\t<a (click)=\"downvote()\">\n\t\t\t\t\t<i class=\"fa fa-thumbs-down\"></i>\n\t\t\t\t</a>\n\n\t\t\t\t<span class=\"topcat-votes\">\n\t\t\t\t\t<i class=\"fa fa-heart\"></i>{{task.votes}}\n\t\t\t\t</span>\n\t\t\t</div>\n\t\t</div>\n\t"
 	        }), 
 	        __metadata('design:paramtypes', [])
 	    ], TaskBox);
