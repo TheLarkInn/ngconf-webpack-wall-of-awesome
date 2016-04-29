@@ -13,8 +13,6 @@ npm-debug.log
 /typings/
 /tsd_typings/
 
-# Dist #
-/public/__build__/
-/src/*/__build__/
-/__build__/**
-.webpack.json
+/src/
+/typings/
+*.json

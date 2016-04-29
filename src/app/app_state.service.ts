@@ -2,7 +2,9 @@
 import {Injectable} from 'angular2/core';
 
 export class AppState {
-  _state = {};
+  _state: {firebaseUrl: string} = {
+    firebaseUrl: 'https://resplendent-torch-6465.firebaseio.com/'
+  };
 
   constructor() {}
   
