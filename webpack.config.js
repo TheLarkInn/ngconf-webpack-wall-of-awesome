@@ -16,12 +16,7 @@ module.exports = {
     main: './src/main.browser.ts'
   },
   output: {
-<<<<<<< HEAD
-  	path: './dist',
-=======
   	path: './',
-    publicPath: '/ngconf-webpack-wall-of-awesome',
->>>>>>> 59cbda7a497c1f56e05f584d1e0d7802b33ded73
   	filename: '[name].bundle.js',
   	sourceMapFilename: '[name].map',
   	chunkFilename: '[id].chunk.js'
